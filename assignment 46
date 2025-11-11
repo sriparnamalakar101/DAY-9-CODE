@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones, sum, product, result;
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+       if (num < 10 || num > 99) {
+        printf("Please enter a valid two-digit number.\n");
+    } else {
+       
+        tens = num / 10;
+        ones = num % 10;
+
+       
+        sum = tens + ones;
+        product = tens * ones;
+
+   
+        result = sum + product;
+
+       
+        if (result == num)
+            printf("%d is a Special two-digit number.\n", num);
+        else
+            printf("%d is NOT a Special two-digit number.\n", num);
+    }
+
+    return 0;
+}
